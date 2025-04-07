@@ -53,7 +53,7 @@ func proc(code int, wp, lp uintptr) uintptr {
 		return r
 	}
 
-	k := (*kbd)(unsafe.Pointer(p))
+	k := (*kbd)(unsafe.Pointer(lp))
 
 	// Optimize check order for most common case first
 	if wp == WM_KEYDOWN {
